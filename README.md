@@ -9,7 +9,7 @@ Code accompanying paper
   year = {2019}
 }
 ```
-
+![screenshot](https://github.com/DFKI-NLP/lrv/blob/master/data/explanations/lrv.png)
 ## Approach
 
 Apply LRP to GCNs. Visualize relevance in each layer.
