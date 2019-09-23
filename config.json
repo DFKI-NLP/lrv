@@ -1,0 +1,65 @@
+{
+  "pipeline": {
+    "preprocess": true,
+    "train": true,
+    "explain": true,
+    "postprocess": true
+  },
+  "preprocessing": {
+    "word_vectors": {
+      "doit": true,
+      "file_word2vec": "./data/embeddings/wiki-news-300d-1M.vec",
+      "dir_vocab": "./data/embeddings/",
+      "vocab_size": 50000
+    },
+    "pubmed": {
+      "doit": true,
+      "to_lower": false,
+      "file_train_text": "./data/PubMed_20k_RCT/train.txt",
+      "file_dev_text": "./data/PubMed_20k_RCT/dev.txt",
+      "file_test_text": "./data/PubMed_20k_RCT/test.txt",
+      "language_model": "en_core_sci_sm"
+    }
+  },
+  "training": {
+    "doit": true,
+    "pad": 350,
+    "crop_train": -1,
+    "crop_dev": -1,
+    "crop_test": -1,
+    "batch_size": 128,
+    "num_workers": 8,
+    "path_model": "./data/model/model.weights",
+    "epochs": 100,
+    "nclasses": 5,
+    "nfeat": 300,
+    "nhid": 300,
+    "patience": 3,
+    "metric": "weighted",
+    "random_seed": 42
+  },
+  "explain": {
+    "file_explanations_jsonl": "./data/explanations/explanations.jsonl",
+    "crop": -1,
+    "occlude": true,
+    "drop": 1.0,
+    "step": 0.1,
+    "verbose": false
+  },
+  "postprocess": {
+    "occlusion_experiment": {
+      "doit": true,
+      "path_out_top_masked_predictions": "./data/explanations/top_masked_predictions.csv",
+      "path_out_bottom_masked_predictions": "./data/explanations/bottom_masked_predictions.csv",
+      "draw_plot": false
+    },
+    "latex": {
+      "doit": true,
+      "path_out_latex": "./data/explanations/explanations.tex",
+      "max_seq_len": 10,
+      "crop": 250,
+      "weight": 15,
+      "base": 0.5
+    }
+  }
+}
