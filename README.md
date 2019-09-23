@@ -1,6 +1,6 @@
 # Layerwise Relevance Visualization in Convolutional Text Graph Classifiers 
 Code accompanying paper
-
+```
 @inproceedings{Schwarzenberg_lrv_2019,
   title = {Layerwise Relevance Visualization in Convolutional Text Graph Classifiers},
   booktitle = {Proceedings of the EMNLP 2019 Workshop on Graph-Based Natural Language Processing},
@@ -8,6 +8,7 @@ Code accompanying paper
   location = {Hong Kong, China},
   year = {2019}
 }
+```
 
 ## Approach
 
