@@ -1,5 +1,5 @@
 # Layerwise Relevance Visualization in Convolutional Text Graph Classifiers 
-Code accompanying paper
+Code accompanying [paper](https://arxiv.org/pdf/1909.10911.pdf)
 ```
 @inproceedings{Schwarzenberg_lrv_2019,
   title = {Layerwise Relevance Visualization in Convolutional Text Graph Classifiers},
